@@ -51,7 +51,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         Alamofire.request(url, method: .get)
             .responseJSON { response in
                 if response.result.isSuccess {
-                    print("Sucess! Got the weather data")
+                    print("Sucess! Got the bitcoin price data")
                     let bitcoinJSON : JSON = JSON(response.result.value!)
                     self.updateBitcoinData(json:bitcoinJSON)
                 }
